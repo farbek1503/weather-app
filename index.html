@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather Application</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+	</head>
+	<body>
+		<div class="bg-img"></div>
+		<br />
+		
+		<div class="container">
+			<div class="search">
+				<input id="query" placeholder="Enter City" />
+				<button onclick="cityData()"><i class="fa-solid fa-magnifying-glass"></i></button>
+			</div>
+			
+			<div class="alerts">
+				<br />
+				<div class="notification">
+					<h5>City Not Found <i class="fa-solid fa-face-frown fa-lg fa-shake"></i></h5>
+					<button class="refreshBtn"><i class="fa-solid fa-rotate-right fa-lg" onclick="refresh()"></i></button>
+				</div>
+				<div class="msg">
+					<br />
+					<h4>There Is Another Way</h4>
+					<h4 style="margin: 5px 0;">Enter The Coordinates Of The City Here</h4>
+					<input id="lat" placeholder="Lat" />
+					<input id="lon" placeholder="Lon" />
+					<button onclick="coordData()">Search</button>
+				</div>
+			</div>
+			
+			<div class="current_area">
+				<div id="current"></div>
+			</div>
+			
+			<div class="buttons_area">
+				<div class="buttons"></div>
+			</div>
+			
+			<div id="days">
+				<div id="day1" class="disActive">
+					<h5></h5>
+				</div>
+				<div id="day2" class="disActive">
+					<h5></h5>
+				</div>
+				<div id="day3" class="disActive">
+					<h5></h5>
+				</div>
+				<div id="day4" class="disActive">
+					<h5></h5>
+				</div>
+				<div id="day5" class="disActive">
+					<h5></h5>
+				</div>
+			</div>
+		</div>
+		
+		<br />
+		<script src="app.js"></script>
+	</body>
+</html>
